@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+ 	<script>
+ 		function isNaturalNumber(n)
+	{
+        n = n.toString(); 
+        var n1 = Math.abs(n),
+            n2 = parseInt(n, 10);
+        return !isNaN(n1) && n2 === n1 && n1.toString() === n;
+    }
+
+	var n;
+    n = prompt("Hay nhap so nguyen n");
+    while(!isNaturalNumber(n)){
+    n = prompt("Nhap lai so nguyen n");
+	}
+	for(var i=1 ; i<=n ; i++)
+	{
+		for(var j = 1; j <= n; j++)
+		{
+			if(i==1 || j==1 || i==n || j==n)
+			document.write('*');
+			else 
+			document.write("--");
+		}
+		document.write('<br/>');
+	}
+
+	</script>
+</body>
+</html>
